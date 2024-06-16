@@ -1,0 +1,59 @@
+
+
+@keyframes pythonShadow {
+    0% {
+        box-shadow: 0 10px 15px -3px rgba(147 197 253), 0 4px 6px -4px rgba(147 197 253); /* Blue */
+    }
+    50% {
+        box-shadow: 0 10px 15px -3px rgba(254 240 138), 0 4px 6px -4px rgba(254 240 138); /* Yellow */
+    }
+    100% {
+        box-shadow: 0 10px 15px -3px rgba(147 197 253), 0 4px 6px -4px rgba(147 197 253); /* Blue */
+    }
+  }
+  
+.hover-shadow-python:hover {
+    animation: pythonShadow 3.5s infinite;
+}
+
+@keyframes javaShadow {
+    0% {
+        box-shadow: 0 10px 15px -3px rgba(248 113 113), 0 4px 6px -4px rgba(248 113 113); /* Blue */
+    }
+    50% {
+        box-shadow: 0 10px 15px -3px rgba(147 197 253), 0 4px 6px -4px rgba(147 197 253); /* Yellow */
+    }
+    100% {
+        box-shadow: 0 10px 15px -3px rgba(248 113 113), 0 4px 6px -4px rgba(248 113 113); /* Blue */
+    }
+}
+  
+  .hover-shadow-java:hover {
+    animation: javaShadow 3.5s infinite;
+}
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.15s;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    background-color: rgb(243 244 246);
+    color: #111;
+    font-size: 150%;
+    min-width: 100px;
+    max-height: 45px;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    box-shadow:0 1px 3px 0 rgb(150,150,150);
+    opacity: 0;
+    bottom: -2em;
+    border-radius:5px;
+    z-index: 99999;
+    visibility: hidden;
+    font: bolder;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
