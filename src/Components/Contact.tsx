@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
         if(form.current){
             emailjs
             .send(serviceId, templateId, templateParamaters, publicKey)
-            .then((result) => {
+            .then(() => {
                 console.log('SUCCESS!');
                 setName('');
                 setEmail('');
