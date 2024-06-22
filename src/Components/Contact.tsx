@@ -67,7 +67,9 @@ const Contact: React.FC = () => {
                     </div>
                     <div className="w-full flex flex-col mt-12 md:mt-6 md:items-end">
                         <h1 className="text-3xl font-bold">Email</h1>
-                        <a href="hello" className="mb-12 mt-4 font-semibold text-blue-700 block uppercase">khaledtujjar2002@gmail.com</a>
+                        <a href="mailto:khaledtujjar2002@gmail.com" className="mb-12 text-xl mt-4 font-semibold text-blue-700 block uppercase">khaledtujjar2002@gmail.com</a>
+                        <h1 className="text-3xl font-bold">Phone</h1>
+                        <a href="tel:4075905575" className="mb-12 text-2xl mt-4 font-semibold text-blue-700 block uppercase">407-590-5575</a>
                         <h1 className="text-3xl font-bold">Social</h1>
                         <ul className="flex">
                             <a href="https://github.com/KTujjar" aria-label="Github" target="_blank" rel="noopener noreferrer">

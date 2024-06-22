@@ -6,6 +6,18 @@ import './introduction.css'
 import ParticlesComponent from './ParticlesComponent';
 
 const Introduction: React.FC = () => {
+
+
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            window.scrollTo({
+            top: section.offsetTop,
+            behavior: 'smooth',
+            });
+        }
+        };
+      
   return (
     <div>
         <div id='home' className=" md:min-h-screen top-0 z-[-2] md:h-screen flex flex-col space-y-4 p-8 items-center drop-shadow-sm bg-gray-800">
@@ -55,7 +67,7 @@ const Introduction: React.FC = () => {
                     </a>
                 </ul>
                 <div className="flex">
-                    <button className="flex justify-between items-center bg-blue-500 w-36 h-12 rounded-md mt-8 md:mt-10 hover:scale-110">
+                    <button className="flex justify-between items-center bg-blue-500 w-36 h-12 rounded-md mt-8 md:mt-10 hover:scale-110 mx-4">
                         <a 
                             className="flex justify-between items-center mx-5 py-2 w-36"
                             href= {resume}
@@ -66,6 +78,19 @@ const Introduction: React.FC = () => {
                             src="https://www.svgrepo.com/show/140007/download-button.svg"
                             alt="Download"
                             className="h-5 w-5 cursor-pointer flex flex-col justify-center items-center"
+                            />
+                        </a>
+                    </button>
+                    <button className="flex justify-between items-center bg-yellow-400 w-36 h-12 rounded-md mt-8 md:mt-10 hover:scale-110 mx-4">
+                        <a 
+                            onClick={() => scrollToSection("contact")}
+                            className="flex justify-between items-center mx-5 py-2 w-36"
+                        >
+                            <span className="text-black font-semibold">Contact</span>
+                            <img 
+                            src="https://cdn-icons-png.freepik.com/256/3095/3095583.png?semt=ais_hybrid"
+                            alt="Download"
+                            className="h-8 w-8 cursor-pointer flex flex-col justify-center items-center"
                             />
                         </a>
                     </button>
