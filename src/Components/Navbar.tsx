@@ -61,32 +61,32 @@ const Navbar: React.FC = () => {
   };
   
   return (
-    <nav className="bg-white p-4 fixed top-0 w-full z-10 shadow-lg">
+    <nav className="bg-[#1a1a1a] p-4 fixed top-0 w-full z-10 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-black text-xl font-bold">
+        <div className="text-gray-50 text-xl font-bold">
           Khaled Tujjar
         </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-12">
-          <a onClick={() => scrollToSection("home")} className={`hover:text-blue-500 ${activeSection === 'home' ? 'text-blue-500' : 'text-black'} font-bold text-lg hover:cursor-pointer`}>Home</a>
-          <a onClick={() => scrollToSection("about")} className={`hover:text-blue-500 ${activeSection === 'about' ? 'text-blue-500' : 'text-black'} font-bold text-lg hover:cursor-pointer`}>About</a>
-          <a onClick={() => scrollToSection("projects")} className={`hover:text-blue-500 ${activeSection === 'projects' ? 'text-blue-500' : 'text-black'} font-bold text-lg hover:cursor-pointer`}>Projects</a>
-          <a onClick={() => scrollToSection("contact")} className={`hover:text-blue-500 ${activeSection === 'contact' ? 'text-blue-500' : 'text-black'} font-bold text-lg hover:cursor-pointer`}>Contact</a>
+          <a onClick={() => scrollToSection("home")} className={`hover:text-[#11c511] ${activeSection === 'home' ? 'text-[#11c511]' : 'text-gray-50'} font-bold text-lg hover:cursor-pointer`}>Home</a>
+          <a onClick={() => scrollToSection("about")} className={`hover:text-[#11c511] ${activeSection === 'about' ? 'text-[#11c511]' : 'text-gray-50'} font-bold text-lg hover:cursor-pointer`}>About</a>
+          <a onClick={() => scrollToSection("projects")} className={`hover:text-[#11c511] ${activeSection === 'projects' ? 'text-[#11c511]' : 'text-gray-50'} font-bold text-lg hover:cursor-pointer`}>Projects</a>
+          <a onClick={() => scrollToSection("contact")} className={`hover:text-[#11c511] ${activeSection === 'contact' ? 'text-[#11c511]' : 'text-gray-50'} font-bold text-lg hover:cursor-pointer`}>Contact</a>
         </div>
         {/*Mobile Menu*/}
         <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-black focus:outline-none">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-white focus:outline-none">
             {menuOpen ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
           </button>
         </div>
       </div>
        {/* Mobile Menu */}
        {menuOpen && (
-        <div className=" absolute bg-gray-100 mt-1 md:hidden top-16 right-0  shadow-lg w-1/3 rounded-md overflow-hidden">
-          <a onClick={() => scrollToSection('home')} className={`block px-4 py-2 ${activeSection === 'home' ? 'text-blue-500' : 'text-black'} font-bold text-lg hover:cursor-pointer`}>Home</a>
-          <a onClick={() => scrollToSection('about')} className={`block px-4 py-2 ${activeSection === 'about' ? 'text-blue-500' : 'text-black'} font-bold text-lg hover:cursor-pointer`}>About</a>
-          <a onClick={() => scrollToSection('projects')} className={`block px-4 py-2 ${activeSection === 'projects' ? 'text-blue-500' : 'text-black'} font-bold text-lg hover:cursor-pointer`}>Projects</a>
-          <a onClick={() => scrollToSection('contact')} className={`block px-4 py-2 ${activeSection === 'contact' ? 'text-blue-500' : 'text-black'} font-bold text-lg hover:cursor-pointer`}>Contact</a>
+        <div className=" absolute bg-[#272727] mt-1 md:hidden top-16 right-0  shadow-lg w-1/3 rounded-md overflow-hidden">
+          <a onClick={() => scrollToSection('home')} className={`block px-4 py-2 ${activeSection === 'home' ? 'text-[#11c511]' : 'text-gray-50'} font-bold text-lg hover:cursor-pointer`}>Home</a>
+          <a onClick={() => scrollToSection('about')} className={`block px-4 py-2 ${activeSection === 'about' ? 'text-[#11c511]' : 'text-gray-50'} font-bold text-lg hover:cursor-pointer`}>About</a>
+          <a onClick={() => scrollToSection('projects')} className={`block px-4 py-2 ${activeSection === 'projects' ? 'text-[#11c511]' : 'text-gray-50'} font-bold text-lg hover:cursor-pointer`}>Projects</a>
+          <a onClick={() => scrollToSection('contact')} className={`block px-4 py-2 ${activeSection === 'contact' ? 'text-[#11c511]' : 'text-gray-50'} font-bold text-lg hover:cursor-pointer`}>Contact</a>
         </div>
        )}
     </nav>

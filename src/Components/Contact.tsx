@@ -43,40 +43,40 @@ const Contact: React.FC = () => {
 
 
     return (
-        <div id='contact' className="min-h-screen bg-gray-50 p-4 ">
+        <div id='contact' className="min-h-screen bg-[#0d0d0d] p-4 ">
             <div className="max-w-7xl mx-auto x-4 sm:px-6 lg:px-6 px-4">
-                <h1 className="text-black  text-4xl sm:text-5xl my-12 text-center font-bold">
+                <h1 className="text-gray-200  text-4xl sm:text-5xl my-12 text-center font-bold">
                     Contact
                 </h1>
-                <h1 className="text-left text-3xl  font-semibold text-blue-500">Let's Connect</h1>
-                <h1 className="text-left text-xl font-semibold text-gray-500">If you have any feedback, oppotunity, or if you would just like to </h1>
-                <h1 className="text-left text-xl  font-semibold text-gray-500">say hello, send me a message. I'd love to hear from you.</h1>
+                <h1 className="text-left text-3xl  font-semibold text-[#11c511]">Let's Connect</h1>
+                <h1 className="text-left text-xl font-semibold text-white">If you have any feedback, oppotunity, or if you would just like to </h1>
+                <h1 className="text-left text-xl  font-semibold text-white">say hello, send me a message. I'd love to hear from you.</h1>
                 <div className="flex justify-between items-center md:items-stretch flex-col md:flex-row pb-24 ">
                     <div className="w-full md:pr-8">
                         <form ref={form} onSubmit={sendEmail}>
-                            <h1 className="text-left text-xl font-semibold my-6"> Name</h1>
-                            <input  onChange={(e) => setName(e.target.value)} type="text" name="user_name" className="h-12 block w-full  mt-4 rounded-md bg-gray-400  placeholder-white pl-4 my-6 outline-gray-500" placeholder='Enter your name'></input>
-                            <h1 className="text-left text-xl  font-semibold mt-8"> Email</h1>
-                            <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" className="h-12 block w-full  mt-4 rounded-md bg-gray-400  placeholder-white pl-4 outline-gray-500" placeholder='Enter your E-mail'></input>
-                            <h1 className="text-left text-xl  font-semibold mt-8"> Message</h1>
-                            <input  onChange={(e) => setMessage(e.target.value)} name="message" className="h-36 block w-full  mt-4 rounded-md bg-gray-400  placeholder-white pl-4 pb-24 outline-gray-500" placeholder='Enter your message'></input>
+                            <h1 className="text-gray-200 text-left text-xl font-semibold my-6"> Name</h1>
+                            <input  onChange={(e) => setName(e.target.value)} type="text" name="user_name" className="h-12 block w-full  mt-4 rounded-md bg-gray-300  placeholder-black pl-4 my-6 outline-none" placeholder='Enter your name'></input>
+                            <h1 className="text-gray-200 text-left text-xl  font-semibold mt-8"> Email</h1>
+                            <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" className="h-12 block w-full  mt-4 rounded-md bg-gray-300  placeholder-black pl-4  outline-none" placeholder='Enter your E-mail'></input>
+                            <h1 className="text-gray-200 text-left text-xl  font-semibold mt-8"> Message</h1>
+                            <input  onChange={(e) => setMessage(e.target.value)} name="message" className="h-36 block w-full  mt-4 rounded-md bg-gray-300  placeholder-black pl-4 pb-24 outline-none" placeholder='Enter your message'></input>
                             <div className="flex justify-center ">
-                                <button type="submit" className="bg-indigo-500 text-white px-6 py-2 w-48 rounded-md hover:bg-indigo-400 mt-6 outline-gray-500">Submit</button>
+                                <button type="submit" className="bg-[#11c511] text-white px-6 py-2 w-48 rounded-md hover:bg-[#13dd13] mt-6 outline-gray-500">Submit</button>
                             </div>
                         </form>
                     </div>
                     <div className="w-full flex flex-col mt-12 md:mt-6 md:items-end">
-                        <h1 className="text-3xl font-bold">Email</h1>
-                        <a href="mailto:khaledtujjar2002@gmail.com" className="mb-12 text-xl mt-4 font-semibold text-blue-700 block uppercase">khaledtujjar2002@gmail.com</a>
-                        <h1 className="text-3xl font-bold">Phone</h1>
-                        <a href="tel:4075905575" className="mb-12 text-2xl mt-4 font-semibold text-blue-700 block uppercase">407-590-5575</a>
-                        <h1 className="text-3xl font-bold">Social</h1>
+                        <h1 className="text-gray-200 text-3xl  text-whitetext-3xl font-bold">Email</h1>
+                        <a href="mailto:khaledtujjar2002@gmail.com" className="mb-12 text-xl mt-4 font-semibold text-[#13dd13] block uppercase">khaledtujjar2002@gmail.com</a>
+                        <h1 className="text-gray-200 text-3xl font-bold">Phone</h1>
+                        <a href="tel:4075905575" className="mb-12 text-2xl mt-4 font-semibold text-[#13dd13] block uppercase">407-590-5575</a>
+                        <h1 className="text-gray-200 text-3xl font-bold">Social</h1>
                         <ul className="flex">
                             <a href="https://github.com/KTujjar" aria-label="Github" target="_blank" rel="noopener noreferrer">
                                 <img
-                                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                                src="https://cdn.worldvectorlogo.com/logos/github-icon-2.svg"
                                 alt="Github"
-                                className="h-12 w-12 md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"
+                                className="h-12 w-12 md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center grayscale"
                                 />
                             </a>
                             <a href="https://stackoverflow.com/users/25458179/khaled-tujjar" aria-label="Stack Overflow" target="_blank" rel="noopener noreferrer">
