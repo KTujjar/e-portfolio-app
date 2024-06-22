@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
     return (
         <div id='contact' className="min-h-screen bg-gray-50 p-4 ">
             <div className="max-w-7xl mx-auto x-4 sm:px-6 lg:px-6 px-4">
-                <h1 className="text-black text-5xl my-12 text-center font-bold">
+                <h1 className="text-black  text-4xl sm:text-5xl my-12 text-center font-bold">
                     Contact
                 </h1>
                 <h1 className="text-left text-3xl  font-semibold text-blue-500">Let's Connect</h1>
