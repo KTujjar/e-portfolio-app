@@ -10,13 +10,12 @@ const About: React.FC = () => {
         </h1>
         <div className="flex flex-col w">
           <p className="text-left text-2xl font-semibold text-white"> 
-            I'm a recent graduate with a bachelors in computer science with ambitions of becoming a Software Engineer. My most recent projects provided me with experience
+            I'm a recent graduate with a Bachelor's in Computer Science with ambitions of becoming a Software Engineer. My most recent projects provided me with experience
             in creating applications using TypeScript and TailwindCSS. 
           </p>
           <h1 className="text-center text-4xl sm:text-5xl font-bold text-[#13dd13] my-4"> Technologies and Tools</h1>
           <p className="text-left text-2xl font-semibold text-white"> 
-            These are the technologies that I've gained experience with in the last four years using them through projects in and out of class.
-            Currently I'm mainly using TypeScript or JavaScript with React to create web applications as I enjoy creating beautiful user experiences that bring joy.
+            Listed below are some of the technologies that I’ve utilized throughout the past four years in and out of the classroom. Currently I am primarily using TypeScript, and JavaScript with React to create web applications. I am passionate about these programs, as I believe I am able to bring joy to users through creating beautiful user experiences.
           </p>
         </div>
         <div className="flex flex-wrap mt-8  items-center justify-center">

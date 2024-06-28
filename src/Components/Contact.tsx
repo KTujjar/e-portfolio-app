@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
                     Contact
                 </h1>
                 <h1 className="text-left text-3xl  font-semibold text-[#11c511]">Let's Connect</h1>
-                <h1 className="text-left text-xl font-semibold text-white">If you have any feedback, oppotunity, or if you would just like to </h1>
+                <h1 className="text-left text-xl font-semibold text-white">If you have any feedback, opportunities, or if you would just like to </h1>
                 <h1 className="text-left text-xl  font-semibold text-white">say hello, send me a message. I'd love to hear from you.</h1>
                 <div className="flex justify-between items-center md:items-stretch flex-col md:flex-row pb-24 ">
                     <div className="w-full md:pr-8">
