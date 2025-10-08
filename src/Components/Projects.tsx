@@ -31,13 +31,13 @@ const Projects: React.FC = () => {
                 </button>
               </div>
             </div>
-            <div className="box  sm:h-[40vh] sm:w-[50vh] h-[30vh] w-[40vh] md:h-[55vh] md:w-[65vh] group relative bg-[url('./assets/Contact.png')] hover:shadow-xl hover:shadow-blue-500 max-h-[65vh] max-w-[65vh] bg-center bg-[length:500px_300px] md:bg-[length:800px_510px] bg-no-repeat bg-size-100% text-white rounded-lg border-gray-600 border-2 hover:scale-110 transition-all ease-in-out delay-50 duration-300">
+            <div className="box  sm:h-[40vh] sm:w-[50vh] h-[30vh] w-[40vh] md:h-[55vh] md:w-[65vh] group relative bg-[url('./assets/CardGame2D.png')] hover:shadow-xl hover:shadow-blue-500 max-h-[65vh] max-w-[65vh] bg-center bg-[length:500px_300px] md:bg-[length:800px_510px] bg-no-repeat bg-size-100% text-white rounded-lg border-gray-600 border-2 hover:scale-110 transition-all ease-in-out delay-50 duration-300">
               <div className="bg-gray-600 opacity-0 flex flex-row justify-between md:justify-normal md:flex-col relative group-hover:opacity-95 px-4 py-4 h-1/3 rounded-b-lg top-2/3 transition-all ease-in-out delay-100 duration-300">
-                <h1 className="text-blue-400 text-lg font-bold">Contact Manager</h1>
-                <p className="font-semibold text-white md:flex hidden"> Basic contact manager web application made using html/css, javascript, and php. </p>
+                <h1 className="text-blue-400 text-lg font-bold">CardGame2D</h1>
+                <p className="font-semibold text-white md:flex hidden"> Poker inspired card game made with C++, SDL3, and CMake. </p>
                 <button className="flex relative mt-6 bg-blue-400 w-36 rounded-md items-center justify-center md:left-48 px-2 py-4 sm:py-1 bottom-6 md:bottom-0">
                   <a
-                  href="https://github.com/Quinn-Barber/Remote-Database"
+                  href="https://github.com/KTujjar/CardGame2D"
                   target="_blank"
                   >GitHub</a>
                 </button>
