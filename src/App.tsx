@@ -1,24 +1,23 @@
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-import './App.css'
-import Navbar from './Components/Navbar'
-import Introduction from './Components/Introduction'
-import About from './Components/About'
-import Projects from './Components/Projects'
-import Contact from './Components/Contact'
-
-
-function App() {
-
-
+export default function App() {
   return (
-    <div className="space-y-0">
-      <Navbar></Navbar>
-      <Introduction></Introduction>
-      <About></About>
-      <Projects></Projects>
-      <Contact></Contact>
-    </div>
-  )
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }
-
-export default App

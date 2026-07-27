@@ -1,6 +1,95 @@
-@tailwind base;
+@import 'tailwindcss';
 
-@tailwind components;
+@theme {
+  /* Surfaces */
+  --color-bg: #0b0b0c;
+  --color-surface: #131315;
+  --color-surface-hover: #17171a;
+  --color-border: #26262a;
+  --color-border-strong: #35353b;
 
-@tailwind utilities;
+  /* Text — contrast ratios against --color-bg noted for accessibility */
+  --color-fg: #ececee; /* 16.1:1 */
+  --color-fg-muted: #b4b4bc; /*  9.6:1 — body copy */
+  --color-fg-faint: #8e8e98; /*  6.1:1 — small mono labels, dates, tags */
 
+  /* Single accent — replaces #0aff0a / #11c511 / #13dd13 */
+  --color-accent: #35d07f;
+  --color-accent-dim: #1f6b45;
+
+  /* Type */
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Keeps section headings clear of the fixed nav when anchor-scrolling */
+  section {
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: #06110b;
+  }
+
+  /* One visible focus treatment for every interactive element */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Small mono metadata: dates, tags, footer, field labels */
+@utility label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Skill / stack chips — larger than label-mono, with tracking eased off to suit */
+@utility tag-mono {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Accent eyebrow above each section heading — larger sibling of label-mono */
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
