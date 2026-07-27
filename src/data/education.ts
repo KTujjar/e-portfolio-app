@@ -11,10 +11,4 @@ export const education: readonly Degree[] = [
     degree: 'Master of Science in Computer Science',
     date: 'Expected August 2027',
   },
-  {
-    school: 'University of Central Florida',
-    degree: 'Bachelor of Science in Computer Science',
-    detail: 'Minor: Mathematics',
-    date: 'August 2024',
-  },
 ];

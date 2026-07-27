@@ -1,4 +1,4 @@
-import { FiArrowDownRight, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import NBodyCanvas from './NBodyCanvas';
 import { profile } from '../data/profile';
 import resume from '../assets/resume.pdf';
@@ -75,14 +75,6 @@ export default function Hero() {
             </a>
           ))}
         </div>
-
-        <a
-          href="#about"
-          className="label-mono mt-20 inline-flex items-center gap-2 self-start text-fg-faint transition-colors hover:text-accent"
-        >
-          Scroll
-          <FiArrowDownRight size={14} aria-hidden="true" />
-        </a>
       </div>
     </section>
   );
