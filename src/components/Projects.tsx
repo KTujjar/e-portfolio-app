@@ -8,23 +8,28 @@ export default function Projects() {
     <Section id="projects" label="03 / Work" title="Selected projects">
       <ul className="grid gap-4 md:grid-cols-2">
         {projects.map((project) => (
-          <li key={project.name}>
+          <li key={project.name} className={project.featured ? 'md:col-span-2' : undefined}>
             <a
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex h-full flex-col rounded-lg border border-border bg-surface p-6 transition-colors hover:border-border-strong hover:bg-surface-hover"
+              className={`group flex h-full flex-col rounded-lg border bg-surface transition-colors hover:border-border-strong hover:bg-surface-hover ${
+                project.featured ? 'border-accent-dim p-6 sm:p-8' : 'border-border p-6'
+              }`}
             >
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="font-medium text-fg">{project.name}</h3>
-                <FiArrowUpRight
-                  size={16}
-                  aria-hidden="true"
-                  className="mt-0.5 shrink-0 text-fg-faint transition-colors group-hover:text-accent"
-                />
-              </div>
+              {project.featured && <p className="label-mono mb-3 text-accent">Featured</p>}
 
-              <p className="mt-3 grow text-sm leading-relaxed text-fg-muted">
+              <h3
+                className={`font-medium text-fg ${project.featured ? 'text-xl sm:text-2xl' : ''}`}
+              >
+                {project.name}
+              </h3>
+
+              <p
+                className={`mt-3 grow leading-relaxed text-fg-muted ${
+                  project.featured ? 'max-w-prose' : 'text-sm'
+                }`}
+              >
                 {project.blurb}
               </p>
 
@@ -34,8 +39,9 @@ export default function Projects() {
                 ))}
               </div>
 
-              <span className="label-mono mt-5 text-fg-faint group-hover:text-accent">
-                {project.hrefLabel}
+              <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-fg-muted transition-colors group-hover:text-accent">
+                View on {project.hrefLabel}
+                <FiArrowUpRight size={16} aria-hidden="true" />
               </span>
             </a>
           </li>

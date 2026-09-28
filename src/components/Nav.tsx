@@ -15,24 +15,38 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Scroll-spy via IntersectionObserver rather than offsetTop arithmetic
+  // Scroll-spy: the active section is the last one whose top has passed a line
+  // halfway down the viewport, and the final section wins once the page bottoms
+  // out (Contact is too short to ever reach the line on large screens).
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(visible.target.id);
-      },
-      { rootMargin: '-30% 0px -60% 0px', threshold: [0, 0.25, 0.5, 1] },
-    );
+    let frame = 0;
 
-    for (const { id } of links) {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    }
+    const update = () => {
+      frame = 0;
+      const line = window.innerHeight * 0.5;
+      const atBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
 
-    return () => observer.disconnect();
+      let current = links[0].id;
+      for (const { id } of links) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= line) current = id;
+      }
+      setActive(atBottom ? links[links.length - 1].id : current);
+    };
+
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
 
   useEffect(() => {

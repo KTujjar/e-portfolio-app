@@ -72,17 +72,16 @@
 /* Small mono metadata: dates, tags, footer, field labels */
 @utility label-mono {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-/* Skill / stack chips — larger than label-mono, with tracking eased off to suit */
+/* Skill / stack chips — sentence case so long tag lists read quietly */
 @utility tag-mono {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 /* Accent eyebrow above each section heading — larger sibling of label-mono */
