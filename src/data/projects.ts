@@ -20,6 +20,14 @@ export const projects: readonly Project[] = [
     hrefLabel: 'GitHub',
   },
   {
+    name: 'MARA',
+    blurb:
+      'A multi agent research assistant where Claude agents plan the research, search the web and local documents, fact check their own findings, and write a final report. I wired the agents together as a LangGraph state machine behind a FastAPI backend that streams progress to a React front end.',
+    tags: ['Python', 'LangGraph', 'Claude API', 'FastAPI', 'RAG', 'React.js', 'Docker'],
+    href: 'https://github.com/KTujjar/MARA',
+    hrefLabel: 'GitHub',
+  },
+  {
     name: 'HID Behavior Detector',
     blurb:
       'A Linux tool that flags suspicious command execution after a new USB keyboard is attached. It collects process and HID events with bpftrace and udev, scores them in a C++ analyzer, and surfaces explainable reports in a desktop app.',
