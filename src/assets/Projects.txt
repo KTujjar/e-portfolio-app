@@ -7,6 +7,16 @@ deployed it to Kubernetes with CI/CD in GitHub Actions.
 Suggested skills: Python, Apache Kafka, FastAPI, PyTorch, Docker, Kubernetes, CI/CD
 
 
+MARA
+
+A multi agent research assistant where Claude agents plan the research, search the web and
+local documents, fact check their own findings, and write a final report. I wired the agents
+together as a LangGraph state machine behind a FastAPI backend that streams progress to a
+React front end.
+
+Suggested skills: Python, LangGraph, Claude API, FastAPI, RAG, React.js, Docker
+
+
 ROCKETDOCS
 
 RocketDocs is an AI powered code documentation generator that lets you create and talk to
